@@ -1,0 +1,15 @@
+footer {
+  @apply bg-[#0e2236] text-white;
+}
+
+footer p {
+  @apply hover:scale-105 transition-all duration-500 hover:font-bold;
+}
+
+.social-media-icon {
+  @apply w-8 hover:scale-105 transition-all duration-500;
+}
+
+.footer-heading {
+  @apply font-bold mt-5 mb-3 text-lg;
+}
