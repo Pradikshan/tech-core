@@ -22,14 +22,14 @@
 
   <h1 class="section-heading">Our Team of Experts</h1>
   <div class="grid grid-cols-5 gap-3">
-    <div class="flex flex-col items-center">
+    <div *ngFor="let team of teams" class="flex flex-col items-center">
       <img
-        src="assets/images/gandalf.jpg"
+        [src]="team.image"
         class="rounded-full w-24 h-24 object-cover"
         alt="team-member"
       />
-      <p class="font-bold text-center text-lg">Gandalf The Grey</p>
-      <p></p>
+      <p class="font-bold text-center text-lg">{{ team.name }}</p>
+      <p>{{ team.title }}</p>
     </div>
   </div>
 </div>
