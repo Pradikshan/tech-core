@@ -5,15 +5,11 @@
       class="flex flex-col bg-[#0e2236] w-full text-white justify-center items-center"
     >
       <p class="text-2xl">Upgrade Your Setup with Premium PC Parts</p>
-      <button
-        class="p-3 mt-4 rounded-xl bg-[#FF6B00] font-bold text-lg hover:scale-110 duration-500 transition-all"
-      >
-        Shop Now
-      </button>
+      <button class="cta-btn mt-4">Shop Now</button>
     </div>
   </div>
 
-  <h1 class="text-3xl text-center mt-16 mb-8 font-bold">Why Choose Us?</h1>
+  <h1 class="section-heading">Why Choose Us?</h1>
   <div class="flex flex-row py-10 justify-between">
     <div *ngFor="let feature of features" class="feature-card">
       <img [src]="feature.image" class="w-8" [alt]="feature.title" />
@@ -22,5 +18,10 @@
         {{ feature.description }}
       </p>
     </div>
+  </div>
+
+  <h1 class="section-heading">Our Team of Experts</h1>
+  <div class="flex flex-row py-10 justify-between">
+    <div class="flex flex-col"><img src=""</div>
   </div>
 </div>
