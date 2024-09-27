@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.cta-btn {
+  @apply p-3 rounded-xl bg-[#FF6B00] font-bold text-lg hover:scale-110 duration-500 transition-all;
+}
