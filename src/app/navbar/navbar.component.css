@@ -1,0 +1,7 @@
+nav {
+  @apply bg-black text-white;
+}
+
+nav a {
+  @apply text-lg mx-5 hover:scale-110 hover:font-bold transition-all duration-500;
+}
