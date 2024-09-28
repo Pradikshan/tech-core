@@ -1,1 +1,26 @@
-<p>cart works!</p>
+<div class="mt-10 mx-8">
+  <h1 class="text-3xl font-bold mb-8">Your Cart</h1>
+
+  <div *ngIf="cartItems.length === 0" class="text-xl">Your cart is empty!</div>
+
+  <div
+    *ngFor="let item of cartItems"
+    class="flex flex-row justify-between p-4 border-b-2 border-black"
+  >
+    <div class="flex flex-row items-center">
+      <img [src]="item.image" class="w-20 h-20 object-cover" />
+      <div class="ml-4">
+        <p class="font-bold text-lg">{{ item.product_name }}</p>
+        <p>{{ item.brand }}</p>
+        <p>${{ item.price }}</p>
+      </div>
+    </div>
+    <p class="text-2xl font-bold">${{ item.price }}</p>
+  </div>
+
+  <div class="my-10">
+    <h2 class="text-2xl font-bold">Total: ${{ getTotalPrice() }}</h2>
+    <button class="cta-btn mt-5 me-5" (click)="checkout()">Checkout</button>
+    <button class="cta-btn mt-5" (click)="clearCart()">Clear Cart</button>
+  </div>
+</div>
