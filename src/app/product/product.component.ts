@@ -12,7 +12,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class ProductComponent {
   products: IProduct[] = [
-    // CPUs
     {
       id: 1,
       image: 'assets/images/cpu1.jpg',
@@ -63,8 +62,6 @@ export class ProductComponent {
       category: 'CPU',
       price: 799,
     },
-
-    // GPUs
     {
       id: 6,
       image: 'assets/images/gpu1.jpg',
@@ -135,8 +132,6 @@ export class ProductComponent {
       category: 'GPU',
       price: 1879,
     },
-
-    // RAMs
     {
       id: 13,
       image: 'assets/images/ram1.jpg',
