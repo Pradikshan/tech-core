@@ -1,0 +1,3 @@
+.feature-card {
+  @apply flex flex-col p-10 rounded-xl items-center shadow-lg hover:scale-105 transition-all duration-700 mx-5;
+}
