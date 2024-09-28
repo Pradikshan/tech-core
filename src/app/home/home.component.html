@@ -9,27 +9,7 @@
     </div>
   </div>
 
-  <h1 class="section-heading">Why Choose Us?</h1>
-  <div class="flex flex-row py-10 justify-between">
-    <div *ngFor="let feature of features" class="feature-card">
-      <img [src]="feature.image" class="w-8" [alt]="feature.title" />
-      <p class="font-bold text-2xl">{{ feature.title }}</p>
-      <p class="text-center">
-        {{ feature.description }}
-      </p>
-    </div>
-  </div>
+  <app-feature></app-feature>
 
-  <h1 class="section-heading">Our Team of Experts</h1>
-  <div class="grid grid-cols-5 gap-3">
-    <div *ngFor="let team of teams" class="flex flex-col items-center">
-      <img
-        [src]="team.image"
-        class="rounded-full w-24 h-24 object-cover"
-        alt="team-member"
-      />
-      <p class="font-bold text-center text-lg">{{ team.name }}</p>
-      <p>{{ team.title }}</p>
-    </div>
-  </div>
+  <app-team></app-team>
 </div>
