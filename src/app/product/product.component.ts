@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IProduct } from '../models/product.model';
 import { CommonModule } from '@angular/common';
+import { CartService } from '../cart/cart.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -166,7 +167,11 @@ export class ProductComponent {
 
   filter: string = '';
 
-  constructor(private route: ActivatedRoute, private router: Router) {}
+  constructor(
+    private cartSrv: CartService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {}
 
   ngOnInit() {
     this.route.queryParams.subscribe((params) => {
@@ -190,6 +195,7 @@ export class ProductComponent {
   }
 
   addToCart(product: IProduct) {
-    console.log('Added to cart:', product);
+    this.cartSrv.addToCart(product);
+    this.router.navigate(['/cart']);
   }
 }
