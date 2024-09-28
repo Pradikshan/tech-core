@@ -1,0 +1,29 @@
+<div class="mt-10">
+  <div class="flex flex-row justify-between mx-8 w-[30%] mb-10">
+    <button class="filter-btn">CPU</button>
+    <button class="filter-btn">GPU</button>
+    <button class="filter-btn">RAM</button>
+  </div>
+
+  <div class="grid grid-cols-1 gap-4 mx-8 mb-8">
+    <div
+      *ngFor="let product of products"
+      class="flex flex-row p-8 rounded-lg border-2 border-black justify-between"
+    >
+      <img [src]="product.image" class="object-cover w-44 h-44" />
+      <div class="flex flex-col w-[70%] mx-5">
+        <p class="font-bold text-2xl">{{ product.product_name }}</p>
+        <p class="text-xl mt-5">{{ product.brand }}</p>
+        <p class="text-lg">Category: {{ product.category }}</p>
+        <p>
+          {{ product.description }}
+        </p>
+      </div>
+      <div class="h-full border-2 border-black"></div>
+      <div class="flex flex-col ms-5 justify-center items-center">
+        <p class="text-[40px]">${{ product.price }}</p>
+        <button class="cta-btn">Add to cart</button>
+      </div>
+    </div>
+  </div>
+</div>
