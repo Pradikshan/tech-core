@@ -1,0 +1,10 @@
+<h1 class="section-heading">Why Choose Us?</h1>
+<div class="flex flex-row py-10 justify-between">
+  <div *ngFor="let feature of features" class="feature-card">
+    <img [src]="feature.image" class="w-8" [alt]="feature.title" />
+    <p class="font-bold text-2xl">{{ feature.title }}</p>
+    <p class="text-center">
+      {{ feature.description }}
+    </p>
+  </div>
+</div>
