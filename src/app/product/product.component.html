@@ -1,26 +1,35 @@
 <div class="mt-10">
-  <div class="flex flex-row justify-between mx-8 w-[30%] mb-10">
+  <!-- Filter buttons section -->
+  <div
+    class="flex flex-col md:flex-row justify-between mx-8 mb-10 space-y-3 md:space-y-0 md:w-[30%]"
+  >
     <button class="filter-btn" (click)="setFilter('CPU')">CPU</button>
     <button class="filter-btn" (click)="setFilter('GPU')">GPU</button>
     <button class="filter-btn" (click)="setFilter('RAM')">RAM</button>
   </div>
 
+  <!-- Product grid section -->
   <div class="grid grid-cols-1 gap-4 mx-8 mb-8">
     <div
       *ngFor="let product of getFilterProducts()"
-      class="flex flex-row p-8 rounded-lg border-2 border-black justify-between"
+      class="flex flex-col md:flex-row p-8 rounded-lg border-2 border-black justify-between"
     >
-      <img [src]="product.image" class="object-cover w-44 h-44" />
-      <div class="flex flex-col w-[70%] mx-5">
+      <img
+        [src]="product.image"
+        class="object-cover w-full md:w-44 h-auto md:h-44 mb-5 md:mb-0"
+      />
+      <div class="flex flex-col w-full md:w-[70%] mx-5">
         <p class="font-bold text-2xl">{{ product.product_name }}</p>
         <p class="text-xl mt-5">{{ product.brand }}</p>
         <p class="text-lg">Category: {{ product.category }}</p>
         <p>{{ product.description }}</p>
       </div>
-      <div class="h-full border-2 border-black"></div>
-      <div class="flex flex-col ms-5 justify-center items-center">
+      <div class="hidden md:block h-full border-2 border-black"></div>
+      <div
+        class="flex flex-col mt-5 md:mt-0 ms-0 md:ms-5 justify-center items-center"
+      >
         <p class="text-[40px]">${{ product.price }}</p>
-        <button class="cta-btn" (click)="addToCart(product)">
+        <button class="cta-btn mt-4 md:mt-0" (click)="addToCart(product)">
           Add to cart
         </button>
       </div>
