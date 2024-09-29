@@ -6,10 +6,14 @@ html {
   @apply font-roboto_condensed bg-[#f8f8f4];
 }
 
-.cta-btn {
+/* .cta-btn {
   @apply p-3 rounded-xl bg-[#FF6B00] font-bold text-lg hover:scale-110 duration-500 transition-all;
-}
+} */
 
 .section-heading {
   @apply text-3xl text-center mt-16 mb-8 font-bold;
+}
+
+.cta-btn {
+  @apply p-3 bg-[#ff5722] text-white hover:bg-[#ff784e] transition-all duration-300 rounded-lg;
 }
