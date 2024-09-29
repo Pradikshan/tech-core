@@ -1,27 +1,28 @@
-# TechCore
+# About the project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.4.
+Tech Core is an e-commerce store built for a tech store selling PC components.
 
-## Development server
+# Technolgies used
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Angular for frontend
+- Tailwind CSS for styling
 
-## Code scaffolding
+## Live demo
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+[Live demo link](https://tech-core-angular.netlify.app/home)
 
-## Build
+## Screenshots of the project
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Homepage
 
-## Running unit tests
+![homepage](./images/homepage.jpeg)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Products page
 
-## Running end-to-end tests
+![prodducts](./images/products.jpeg)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Cart page
 
-## Further help
+![cart-1](./images/cart.jpeg)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+![cart-2](./images/cart-2.jpeg)
