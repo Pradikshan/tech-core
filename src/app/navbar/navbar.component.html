@@ -1,13 +1,40 @@
-<nav class="w-full p-10">
-  <div class="flex flex-row justify-around">
-    <div class="flex flex-row">
+<nav class="w-full p-6 bg-black text-white">
+  <div class="flex flex-row justify-between items-center">
+    <div class="flex flex-row items-center">
       <img src="assets/images/logo.png" alt="nav-logo" class="w-10 me-3" />
       <p class="text-2xl">Tech Core</p>
     </div>
-    <div class="flex flex-row justify-between">
+
+    <button class="block md:hidden text-white" (click)="toggleNav()">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-8 w-8"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16m-7 6h7"
+        />
+      </svg>
+    </button>
+
+    <div class="hidden md:flex flex-row justify-between space-x-5">
       <a routerLink="/home">Home</a>
       <a routerLink="/product">Products</a>
       <a routerLink="/cart">Cart</a>
     </div>
+  </div>
+
+  <div
+    class="flex flex-col items-start mt-5 space-y-3 md:hidden"
+    [ngClass]="{ hidden: !isMenuOpen }"
+  >
+    <a routerLink="/home">Home</a>
+    <a routerLink="/product">Products</a>
+    <a routerLink="/cart">Cart</a>
   </div>
 </nav>
