@@ -13,3 +13,7 @@ footer p {
 .footer-heading {
   @apply font-bold mt-5 mb-3 text-lg;
 }
+
+.cta-btn {
+  @apply p-3 bg-[#ff5722] text-white hover:bg-[#ff784e] transition-all duration-300 rounded-lg;
+}
